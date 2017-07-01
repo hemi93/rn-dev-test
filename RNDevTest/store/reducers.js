@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import { routerReducer } from 'react-router-redux'
+import auth from './reducers/auth'
+import login from '../src/routes/Login/modules/reducer'
 
-export const makeRootReducer = (asyncReducers) => combineReducers({
-  ...asyncReducers
+export const makeRootReducer = () => combineReducers({
+  auth,
+  login
 })
 
 export default makeRootReducer
