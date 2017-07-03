@@ -4,9 +4,7 @@ import { bindActionCreators } from 'redux'
 import Form from '../components/Form'
 import validate from '../modules/validate'
 import { onSubmit } from '../modules/actions'
-
-// FIXME DEBUG
-import Config from 'react-native-config'
+import Config from 'react-native-config' // FIXME Only needed during debugging
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   onSubmit

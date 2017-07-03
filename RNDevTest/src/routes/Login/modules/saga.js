@@ -1,4 +1,5 @@
-import { put, takeLatest, take, race } from 'redux-saga/effects'
+import { put, take, race } from 'redux-saga/effects'
+import { Actions } from 'react-native-router-flux'
 import { API_SIGN_USER_IN, SUBMIT_SIGN_IN, SET_AUTH } from './constants'
 import { signInApiCall } from './actions'
 
@@ -11,22 +12,26 @@ function * rootLoginSaga () {
       fail: take(`${API_SIGN_USER_IN}_FAIL`)
     })
 
-    console.warn(result)
-
     if (result.success) {
       yield put({
         type: SET_AUTH,
-        payload: result.success.data
+        payload: result.success.payload.data
       })
+      Actions.jobs()
     } else {
-
+      // process login failure here
     }
   }
 }
 
-const getSignInPayload = (credentials) => ({
-  grant_type: 'client_credentials',
-  ...credentials
-})
+const getSignInPayload = (credentials) => {
+  const { email, password } = credentials
+
+  return ({
+    grant_type: 'client_credentials',
+    client_id: email,
+    client_secret: password
+  })
+}
 
 export default rootLoginSaga

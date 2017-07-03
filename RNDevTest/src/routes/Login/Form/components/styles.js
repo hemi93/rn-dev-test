@@ -1,5 +1,5 @@
 import { Dimensions, StyleSheet } from 'react-native'
-import { COLOR_PRIMARY } from '../../../../../constants/colors'
+import { COLOR_PRIMARY } from '../../../../constants/colors'
 
 const {
   height: deviceHeight
@@ -7,22 +7,22 @@ const {
 
 export default StyleSheet.create({
   form: {
-    paddingTop: 110,
     alignSelf: 'stretch',
-    justifyContent: 'space-between',
     flexDirection: 'column',
+    height: deviceHeight,
+    justifyContent: 'space-between',
     padding: 16,
-    height: deviceHeight
+    paddingTop: 110
   },
   submitButton: {
-    height: 64,
-    alignSelf: 'stretch',
     alignItems: 'center',
+    alignSelf: 'stretch',
+    height: 64,
     justifyContent: 'center',
     marginBottom: 16
   },
   submitButtonText: {
-    fontSize: 24,
-    color: COLOR_PRIMARY
+    color: COLOR_PRIMARY,
+    fontSize: 24
   }
 })

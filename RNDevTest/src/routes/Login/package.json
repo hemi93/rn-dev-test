@@ -2,5 +2,5 @@
   "name": "app",
   "version": "0.0.0",
   "private": true,
-  "main": "./containers/LoginContainer.js"
+  "main": "./Login.js"
 }
