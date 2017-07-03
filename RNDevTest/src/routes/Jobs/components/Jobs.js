@@ -10,7 +10,7 @@ import styles from './styles'
 export default class Jobs extends Component {
   static propTypes = {
     canLoadMore: PropTypes.bool.isRequired,
-    dataSource: PropTypes.object.isRequired,
+    dataSource: PropTypes.object,
     loadMore: PropTypes.func.isRequired
   }
 
