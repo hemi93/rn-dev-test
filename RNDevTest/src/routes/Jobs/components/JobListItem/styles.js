@@ -2,54 +2,35 @@ import { StyleSheet, Platform } from 'react-native'
 
 const companyImageHeight = 200
 const titlesContainerHeight = 72
-export const infoBarHeight = 75
+export const infoBarHeight = 80
 
 export default StyleSheet.create({
   container: {
     alignSelf: 'stretch',
-    borderBottomColor: '#F5F5F5',
     backgroundColor: 'white',
-    marginBottom: 8,
+    borderBottomColor: '#F5F5F5',
     flexDirection: 'column',
-    justifyContent: 'space-between'
-  },
-  infoContainer: {
-    flexDirection: 'column',
-    height: titlesContainerHeight + infoBarHeight,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginBottom: 8
   },
   titlesContainer: {
-    padding: 8,
-    flexDirection: 'column',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    height: titlesContainerHeight
+    flexDirection: 'column',
+    height: titlesContainerHeight,
+    padding: 8
   },
   title: {
+    color: '#fafafa',
     fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
     fontSize: 24,
-    fontWeight: '400',
-    color: '#fafafa'
-  },
-  infoBarText: {
-    color: '#607d8b',
-    fontSize: 15,
-    textAlign: 'center'
-  },
-  rateType: {
-    color: '#B0BEC5',
-    fontSize: 10,
-    textAlign: 'center'
+    fontWeight: '400'
   },
   companyImg: {
     height: companyImageHeight,
     justifyContent: 'flex-end'
   },
   companyName: {
-    fontStyle: 'italic',
-    color: '#bdbdbd'
-  },
-  icon: {
-    fontSize: 18,
-    color: '#ff5252'
+    color: '#bdbdbd',
+    fontStyle: 'italic'
   }
 })

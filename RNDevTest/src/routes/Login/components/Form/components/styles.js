@@ -5,8 +5,8 @@ const signInButtonBorderRadius = signInButtonHeight / 2
 
 export default StyleSheet.create({
   form: {
-    flex: 1,
     alignSelf: 'stretch',
+    flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
     padding: 16,

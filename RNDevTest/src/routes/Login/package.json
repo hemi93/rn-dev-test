@@ -1,6 +1,6 @@
 {
   "main": "./containers/LoginContainer.js",
-  "name": "app",
+  "name": "login-page",
   "private": true,
   "version": "0.0.0"
 }

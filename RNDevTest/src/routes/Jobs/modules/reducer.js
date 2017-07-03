@@ -12,18 +12,18 @@ const ACTION_HANDLERS = {
     const ids = newData.map((obj, index) => index)
 
     return state.withMutations((state) => {
-      state.set('dataSource', ds.cloneWithRows(newData, ids))
-      state.set('data', newData)
-      state.set('page', state.page + 1)
       state.set('canLoadMore', action.payload.length > 0)
+      state.set('data', newData)
+      state.set('dataSource', ds.cloneWithRows(newData, ids))
+      state.set('page', state.page + 1)
     })
   }
 }
 
 const InitialState = Record({
   canLoadMore: true,
-  dataSource: null,
   data: [],
+  dataSource: null,
   page: 1
 })
 

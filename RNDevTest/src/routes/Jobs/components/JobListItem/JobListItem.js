@@ -1,11 +1,9 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-import styles from './styles'
 import JobPropType from '../../modules/JobPropType'
-import InfoBarElement from './InfoBarElement'
-import InfoBar from './InfoBar'
 import getCompanyLogoURI from './modules/getCompanyLogoURI'
+import InfoBar from './InfoBar'
+import styles from './styles'
 
 const JobListItem = ({ job }) => (
   <View style={styles.container}>
@@ -22,33 +20,8 @@ const JobListItem = ({ job }) => (
         </Text>
       </View>
     </Image>
-    <InfoBar>
-      <InfoBarElement>
-        <Icon name='ios-pricetag' style={styles.icon} />
-        <View>
-          <Text style={styles.infoBarText}>
-            {`${job.rate}£`}
-          </Text>
-          <Text style={styles.rateType}>
-            {`${job.rate_type}`}
-          </Text>
-        </View>
-      </InfoBarElement>
 
-      <InfoBarElement>
-        <Icon name='ios-timer' style={styles.icon} />
-        <Text style={styles.infoBarText}>
-          {job.experience}
-        </Text>
-      </InfoBarElement>
-
-      <InfoBarElement>
-        <Icon name='ios-pin' style={styles.icon} />
-        <Text style={styles.infoBarText}>
-          {`${job.location_town || job.location_city}`}
-        </Text>
-      </InfoBarElement>
-    </InfoBar>
+    <InfoBar job={job} />
   </View>
 )
 

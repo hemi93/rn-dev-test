@@ -8,16 +8,16 @@ const Form = ({ handleSubmit, onSubmit, valid }) => (
   <View style={styles.form}>
     <View>
       <LabelledReduxFormTextInput
+        keyboardType='email-address'
         label='Email'
         name='email'
         required
-        keyboardType='email-address'
       />
       <LabelledReduxFormTextInput
         label='Password'
         name='password'
-        secureTextEntry
         required
+        secureTextEntry
       />
     </View>
     <TouchableOpacity

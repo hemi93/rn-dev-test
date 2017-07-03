@@ -7,9 +7,9 @@ export const signInApiCall = (data) => ({
   type: API_SIGN_USER_IN,
   payload: {
     request: {
+      data,
       method: 'POST',
-      url: '/token',
-      data
+      url: '/token'
     }
   }
 })

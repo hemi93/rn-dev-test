@@ -2,9 +2,6 @@ import { race, take, fork, put, select } from 'redux-saga/effects'
 import { API_LOAD_MORE_JOBS, APPEND_NEXT_PAGE, LOAD_MORE } from './constants'
 import { loadMoreJobsApiCall } from './actions'
 
-const getAuthReducer = (state) => state.auth
-const getJobsReducer = (state) => state.jobs
-
 function * rootJobsSaga () {
   yield fork(loadMoreDataWorker)
 }
@@ -31,5 +28,9 @@ function * loadMoreDataWorker () {
     }
   }
 }
+
+const getAuthReducer = (state) => state.auth
+
+const getJobsReducer = (state) => state.jobs
 
 export default rootJobsSaga

@@ -5,10 +5,10 @@ const { width, height } = Dimensions.get('window')
 export default StyleSheet.create({
   image: {
     flex: 1,
-    resizeMode: 'cover',
+    height,
     justifyContent: 'center',
-    width,
-    height
+    resizeMode: 'cover',
+    width
   },
   container: {
     flex: 1,

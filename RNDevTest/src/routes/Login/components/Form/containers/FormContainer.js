@@ -13,8 +13,8 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
 // FIXME Populate with debug values
 const mapStateToProps = (state) => ({
   initialValues: {
-    email: Config.TEST_ACCOUNT_EMAIL,
-    password: Config.TEST_ACCOUNT_PASSWORD
+    email: Config.TEST_ACCOUNT_EMAIL || '',
+    password: Config.TEST_ACCOUNT_PASSWORD || ''
   }
 })
 
