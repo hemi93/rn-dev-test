@@ -1,7 +1,7 @@
 import { StyleSheet, Platform } from 'react-native'
 
-const companyImageHeight = 170
-const titlesContainerHeight = 80
+const companyImageHeight = 200
+const titlesContainerHeight = 72
 export const infoBarHeight = 75
 
 export default StyleSheet.create({
@@ -20,12 +20,15 @@ export default StyleSheet.create({
   },
   titlesContainer: {
     padding: 8,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    height: titlesContainerHeight
   },
   title: {
     fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
     fontSize: 24,
-    fontWeight: '400'
+    fontWeight: '400',
+    color: '#fafafa'
   },
   infoBarText: {
     color: '#607d8b',
@@ -38,13 +41,15 @@ export default StyleSheet.create({
     textAlign: 'center'
   },
   companyImg: {
-    height: companyImageHeight
+    height: companyImageHeight,
+    justifyContent: 'flex-end'
   },
   companyName: {
     fontStyle: 'italic',
     color: '#bdbdbd'
   },
   icon: {
-    fontSize: 18
+    fontSize: 18,
+    color: '#ff5252'
   }
 })
