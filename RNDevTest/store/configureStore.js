@@ -1,37 +1,27 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import { createLogger } from 'redux-logger'
 import makeRootReducer from './reducers'
 import rootSaga from './saga'
+import getAxiosMiddleware from './axiosMiddleware'
 
 const sagaMiddleware = createSagaMiddleware()
 
 export default (initialState = {}) => {
+  // MIDDLEWARE CONFIG
+  const middleware = [
+    getAxiosMiddleware(),
+    sagaMiddleware,
+    createLogger()
+  ]
 
-  // ======================================================
-  // Store Middleware
-  // ======================================================
-    const middleware = [
-      sagaMiddleware
-    ]
-
-  // ======================================================
-  // Store Enhancers
-  // ======================================================
-    const enhancers = []
-    let composeEnhancers = compose
-
-    if (__DEV__) {
-      if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === 'function') {
-        composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      }
-    }
-
-
+  // STORE ENHANCERS
+  const enhancers = []
 
   const store = createStore(
     makeRootReducer(),
     initialState,
-    composeEnhancers(
+    compose(
       applyMiddleware(...middleware),
       ...enhancers
     )

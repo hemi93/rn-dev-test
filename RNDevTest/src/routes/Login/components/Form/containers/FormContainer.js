@@ -5,11 +5,20 @@ import Form from '../components/Form'
 import validate from '../modules/validate'
 import { onSubmit } from '../modules/actions'
 
+// FIXME DEBUG
+import Config from 'react-native-config'
+
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   onSubmit
 }, dispatch)
 
-const mapStateToProps = (state) => ({})
+// FIXME Populate with debug values
+const mapStateToProps = (state) => ({
+  initialValues: {
+    email: Config.TEST_ACCOUNT_EMAIL,
+    password: Config.TEST_ACCOUNT_PASSWORD
+  }
+})
 
 const ReduxForm = reduxForm({
   form: 'login',

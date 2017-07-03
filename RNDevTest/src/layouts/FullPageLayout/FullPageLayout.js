@@ -1,20 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyleSheet, View } from 'react-native'
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: 'transparent',
-    bottom: 0,
-    justifyContent: 'center',
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    flexGrow: 1
-  }
-})
+import { View } from 'react-native'
+import styles from './styles'
 
 const FullPageLayout = ({ children }) => (
   <View style={styles.container}>

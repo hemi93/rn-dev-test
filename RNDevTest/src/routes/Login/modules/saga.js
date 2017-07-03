@@ -1,13 +1,32 @@
-import { takeLatest } from 'redux-saga/effects'
-import { SUBMIT_SIGN_IN } from './constants'
+import { put, takeLatest, take, race } from 'redux-saga/effects'
+import { API_SIGN_USER_IN, SUBMIT_SIGN_IN, SET_AUTH } from './constants'
+import { signInApiCall } from './actions'
 
 function * rootLoginSaga () {
-  yield takeLatest(SUBMIT_SIGN_IN, handleSubmitSignIn)
+  while (true) {
+    const { payload: credentials } = yield take(SUBMIT_SIGN_IN)
+    yield put(signInApiCall(getSignInPayload(credentials)))
+    const result = yield race({
+      success: take(`${API_SIGN_USER_IN}_SUCCESS`),
+      fail: take(`${API_SIGN_USER_IN}_FAIL`)
+    })
+
+    console.warn(result)
+
+    if (result.success) {
+      yield put({
+        type: SET_AUTH,
+        payload: result.success.data
+      })
+    } else {
+
+    }
+  }
 }
 
-function * handleSubmitSignIn (action) {
-  console.warn(JSON.stringify(action))
-  const { email, password } = action.payload
-}
+const getSignInPayload = (credentials) => ({
+  grant_type: 'client_credentials',
+  ...credentials
+})
 
 export default rootLoginSaga
