@@ -1,6 +1,9 @@
 import { Dimensions, StyleSheet } from 'react-native'
 import { COLOR_PRIMARY } from '../../../../constants/colors'
 
+const signInButtonHeight = 100
+const signInButtonBorderRadius = signInButtonHeight / 2
+
 const {
   height: deviceHeight
 } = Dimensions.get('window')
@@ -17,12 +20,20 @@ export default StyleSheet.create({
   submitButton: {
     alignItems: 'center',
     alignSelf: 'stretch',
-    height: 64,
+    backgroundColor: '#FF5252',
+    borderRadius: signInButtonBorderRadius,
+    height: 84,
     justifyContent: 'center',
-    marginBottom: 16
+    marginBottom: 24
   },
   submitButtonText: {
-    color: COLOR_PRIMARY,
+    color: 'white',
     fontSize: 24
+  },
+  inactive: {
+    opacity: 0.3
+  },
+  active: {
+    opacity: 1
   }
 })

@@ -11,9 +11,12 @@ export default (initialState = {}) => {
   // MIDDLEWARE CONFIG
   const middleware = [
     getAxiosMiddleware(),
-    sagaMiddleware,
-    createLogger()
+    sagaMiddleware
   ]
+
+  if (__DEV__) {
+    middleware.push(createLogger())
+  }
 
   // STORE ENHANCERS
   const enhancers = []

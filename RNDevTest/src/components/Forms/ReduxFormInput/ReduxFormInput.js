@@ -1,17 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TextInput, View, Text, StyleSheet } from 'react-native'
-
-const styles = StyleSheet.create({
-  input: {
-    alignSelf: 'stretch'
-  },
-  error: {
-    color: '#C62828',
-    alignSelf: 'flex-end',
-    fontSize: 10
-  }
-})
+import { TextInput, View, Text } from 'react-native'
+import styles from './styles'
 
 const ReduxFormInput = ({ input: { onChange, ...restInput }, ...rest }) => (
   <View>
@@ -19,6 +9,8 @@ const ReduxFormInput = ({ input: { onChange, ...restInput }, ...rest }) => (
       {...rest}
       {...restInput}
       onChangeText={onChange}
+      style={styles.input}
+      underlineColorAndroid='#9E9E9E'
     />
     {rest.meta.error && (
       <Text style={styles.error}>

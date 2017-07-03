@@ -3476,6 +3476,14 @@ react-native-experimental-navigation@0.28.x:
     fbjs "^0.8.1"
     prop-types "^15.5.10"
 
+react-native-infinite-scroll-view@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-infinite-scroll-view/-/react-native-infinite-scroll-view-0.4.3.tgz#bc5dfb1645b8966bb6686d4cba899acb229ca003"
+  dependencies:
+    prop-types "^15.5.10"
+    react-clone-referenced-element "^1.0.1"
+    react-native-scrollable-mixin "^1.0.0"
+
 react-native-keyboard-aware-scroll-view@^0.2.9:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scroll-view/-/react-native-keyboard-aware-scroll-view-0.2.9.tgz#2a1ae49cfae90a9665b21763c1f8bd03ed5fb92c"
@@ -3491,6 +3499,10 @@ react-native-router-flux@^3.40.1:
     react-native-keyboard-aware-scroll-view "^0.2.9"
     react-native-tabs "^1.0.9"
     react-static-container "1.0.1"
+
+react-native-scrollable-mixin@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-mixin/-/react-native-scrollable-mixin-1.0.1.tgz#34a32167b64248594154fd0d6a8b03f22740548e"
 
 react-native-tabs@^1.0.9:
   version "1.0.9"

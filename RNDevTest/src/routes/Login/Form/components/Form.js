@@ -21,10 +21,10 @@ const Form = ({ handleSubmit, onSubmit, valid }) => (
       />
     </View>
     <TouchableOpacity
-      onPress={handleSubmit(onSubmit)}
-      style={styles.submitButton}
+      onPress={valid ? handleSubmit(onSubmit) : () => {}}
+      style={[styles.submitButton, valid ? styles.active : styles.inactive]}
     >
-      <Text style={styles.submitButtonText}>
+      <Text style={[styles.submitButtonText, valid ? styles.active : styles.inactive]}>
         Sign In
       </Text>
     </TouchableOpacity>

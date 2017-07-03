@@ -17,9 +17,9 @@ function * rootLoginSaga () {
         type: SET_AUTH,
         payload: result.success.payload.data
       })
-      Actions.jobs()
+      Actions.jobs({ type: 'replace' })
     } else {
-      // process login failure here
+      // TODO process login failure here
     }
   }
 }

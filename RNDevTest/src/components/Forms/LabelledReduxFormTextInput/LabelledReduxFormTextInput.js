@@ -6,7 +6,7 @@ import ReduxFormInput from '../ReduxFormInput'
 import styles from './styles'
 
 const LabelledReduxFormTextInput = ({ label, name, ...rest }) => (
-  <View>
+  <View style={styles.wrapper}>
     <Text style={styles.label}>
       {label}
     </Text>

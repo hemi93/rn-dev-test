@@ -1,10 +1,14 @@
 import React from 'react'
-import { KeyboardAvoidingView } from 'react-native'
+import { KeyboardAvoidingView, Image } from 'react-native'
 import Form from './Form'
+import bgImageSource from './assets/bg.jpeg'
+import styles from './styles'
 
 const Login = () => (
-  <KeyboardAvoidingView>
-    <Form />
+  <KeyboardAvoidingView style={styles.container}>
+    <Image source={bgImageSource} style={styles.image}>
+      <Form />
+    </Image>
   </KeyboardAvoidingView>
 )
 
