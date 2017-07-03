@@ -15,6 +15,9 @@ const JobListItem = ({ job }) => (
         <Text style={styles.title}>
           {job.role}
         </Text>
+        <Text style={styles.companyName}>
+          {job.company}
+        </Text>
         <Text style={styles.location}>
           {`${job.location_town || job.location_city}`}
         </Text>

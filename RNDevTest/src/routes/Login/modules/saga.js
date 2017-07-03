@@ -1,12 +1,14 @@
 import { put, take, race } from 'redux-saga/effects'
 import { Actions } from 'react-native-router-flux'
 import { API_SIGN_USER_IN, SUBMIT_SIGN_IN, SET_AUTH } from './constants'
-import { signInApiCall } from './actions'
+import { signInApiCall, setIsLoading } from './actions'
 
 function * rootLoginSaga () {
   while (true) {
     const { payload: credentials } = yield take(SUBMIT_SIGN_IN)
-    yield put(signInApiCall(getSignInPayload(credentials)))
+    yield put(setIsLoading(true))
+    const signInPayload = getSignInPayload(credentials)
+    yield put(signInApiCall(signInPayload))
     const result = yield race({
       success: take(`${API_SIGN_USER_IN}_SUCCESS`),
       fail: take(`${API_SIGN_USER_IN}_FAIL`)
@@ -19,8 +21,10 @@ function * rootLoginSaga () {
       })
       Actions.jobs({ type: 'replace' })
     } else {
-      // TODO process login failure here
+      // TODO process sign in failure here, display information to User.
     }
+
+    yield put(setIsLoading(false))
   }
 }
 

@@ -7,7 +7,8 @@ export default StyleSheet.create({
   container: {
     alignSelf: 'stretch',
     borderBottomColor: '#F5F5F5',
-    borderBottomWidth: 2,
+    backgroundColor: 'white',
+    marginBottom: 8,
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
@@ -26,9 +27,8 @@ export default StyleSheet.create({
   },
   title: {
     fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
-    fontSize: 22,
-    fontWeight: '400',
-    marginBottom: 4
+    fontSize: 24,
+    fontWeight: '400'
   },
   location: {
     color: '#BDBDBD',
@@ -36,7 +36,7 @@ export default StyleSheet.create({
     fontWeight: 'bold'
   },
   rate: {
-    color: '#FF5252',
+    color: '#607d8b',
     fontSize: 20,
     textAlign: 'right'
   },
@@ -47,5 +47,9 @@ export default StyleSheet.create({
   },
   companyImg: {
     height: companyImageHeight
+  },
+  companyName: {
+    fontStyle: 'italic',
+    color: '#bdbdbd'
   }
 })

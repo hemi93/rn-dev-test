@@ -22,7 +22,7 @@ const ACTION_HANDLERS = {
 
 const InitialState = Record({
   canLoadMore: true,
-  dataSource: ds.cloneWithRows([]),
+  dataSource: null,
   data: [],
   page: 1
 })

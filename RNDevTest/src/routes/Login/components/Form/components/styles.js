@@ -1,20 +1,16 @@
-import { Dimensions, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const signInButtonHeight = 100
 const signInButtonBorderRadius = signInButtonHeight / 2
 
-const {
-  height: deviceHeight
-} = Dimensions.get('window')
-
 export default StyleSheet.create({
   form: {
+    flex: 1,
     alignSelf: 'stretch',
     flexDirection: 'column',
-    height: deviceHeight,
     justifyContent: 'space-between',
     padding: 16,
-    paddingTop: 110
+    paddingTop: 80
   },
   submitButton: {
     alignItems: 'center',

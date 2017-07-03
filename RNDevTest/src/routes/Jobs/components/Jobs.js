@@ -3,6 +3,7 @@ import { ListView } from 'react-native'
 import PropTypes from 'prop-types'
 import InfiniteScrollView from 'react-native-infinite-scroll-view'
 import FullPageLayout from '../../../layouts/FullPageLayout'
+import Spinner from '../../../components/Spinner'
 import JobListItem from './JobListItem'
 import styles from './styles'
 
@@ -22,6 +23,7 @@ export default class Jobs extends Component {
 
     return (
       <FullPageLayout>
+        {!dataSource && <Spinner />}
         {dataSource && (
           <ListView
             canLoadMore={canLoadMore}

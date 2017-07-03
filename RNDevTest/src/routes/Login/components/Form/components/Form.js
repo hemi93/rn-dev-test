@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, TouchableOpacity } from 'react-native'
-import LabelledReduxFormTextInput from '../../../../components/Forms/LabelledReduxFormTextInput'
+import LabelledReduxFormTextInput from '../../../../../components/Forms/LabelledReduxFormTextInput'
 import styles from './styles'
 
 const Form = ({ handleSubmit, onSubmit, valid }) => (
