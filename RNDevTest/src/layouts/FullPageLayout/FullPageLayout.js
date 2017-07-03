@@ -1,21 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Dimensions, StyleSheet, View, Text } from 'react-native'
-
-const {
-  height: deviceHeight
-} = Dimensions.get("window")
+import { StyleSheet, View } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    backgroundColor:"transparent",
+    alignItems: 'center',
+    backgroundColor: 'transparent',
     bottom: 0,
-    justifyContent: "center",
+    justifyContent: 'center',
     left: 0,
-    position: "absolute",
+    position: 'absolute',
     right: 0,
-    top: 0
+    top: 0,
+    flexGrow: 1
   }
 })
 

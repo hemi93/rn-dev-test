@@ -2,7 +2,7 @@ import { Record } from 'immutable'
 import { SET_AUTH } from '../../src/routes/Login/modules/constants'
 
 const ACTION_HANDLERS = {
-  [SET_AUTH] : (state, action) => {
+  [SET_AUTH]: (state, action) => {
     const {
       access_token,
       expires_in,

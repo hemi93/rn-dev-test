@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
-import { Dimensions, StyleSheet, View, Text } from 'react-native'
-import FullPageLayout from '../../../layouts/FullPageLayout'
+import React from 'react'
+import { KeyboardAvoidingView } from 'react-native'
+import Form from './Form'
 
-const Login = () => (
-  <FullPageLayout>
-    <Text>
-      LoginPage
-    </Text>
-  </FullPageLayout>
+const Login = ({ isLoading }) => (
+  <KeyboardAvoidingView>
+    <Form />
+  </KeyboardAvoidingView>
 )
 
 export default Login

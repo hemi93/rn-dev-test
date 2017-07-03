@@ -1,0 +1,6 @@
+{
+  "name": "labelled-redux-form-text-input",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LabelledReduxFormTextInput.js"
+}

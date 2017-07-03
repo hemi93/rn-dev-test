@@ -2,7 +2,7 @@ import { Record } from 'immutable'
 import { TOGGLE_IS_LOADING } from './constants'
 
 const ACTION_HANDLERS = {
-  [TOGGLE_IS_LOADING] : (state, action) => {
+  [TOGGLE_IS_LOADING]: (state, action) => {
     return state.set('isLoading', !state.isLoading)
   }
 }
