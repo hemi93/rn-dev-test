@@ -1,6 +1,6 @@
 {
+  "main": "./containers/FormContainer.js",
   "name": "login-form",
-  "version": "0.0.0",
   "private": true,
-  "main": "./containers/FormContainer.js"
+  "version": "0.0.0"
 }

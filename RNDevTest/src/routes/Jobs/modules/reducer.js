@@ -2,7 +2,9 @@ import { Record } from 'immutable'
 import { ListView } from 'react-native'
 import { APPEND_NEXT_PAGE } from './constants'
 
-const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1.id !== r2.id })
+const ds = new ListView.DataSource({
+  rowHasChanged: (r1, r2) => r1.id !== r2.id
+})
 
 const ACTION_HANDLERS = {
   [APPEND_NEXT_PAGE]: (state, action) => {

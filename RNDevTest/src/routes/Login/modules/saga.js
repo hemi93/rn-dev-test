@@ -28,9 +28,9 @@ const getSignInPayload = (credentials) => {
   const { email, password } = credentials
 
   return ({
-    grant_type: 'client_credentials',
     client_id: email,
-    client_secret: password
+    client_secret: password,
+    grant_type: 'client_credentials'
   })
 }
 

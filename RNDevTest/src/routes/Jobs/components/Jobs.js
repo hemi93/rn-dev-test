@@ -24,12 +24,13 @@ export default class Jobs extends Component {
       <FullPageLayout>
         {dataSource && (
           <ListView
-            dataSource={dataSource}
-            initialListSize={0}
-            pageSize={10}
             canLoadMore={canLoadMore}
-            onLoadMoreAsync={() => loadMore()}
+            dataSource={dataSource}
+            enableEmptySections
+            initialListSize={0}
             onEndReachedThreshold={10}
+            onLoadMoreAsync={() => loadMore()}
+            pageSize={10}
             renderRow={(job) => <JobListItem job={job} />}
             renderScrollComponent={props => <InfiniteScrollView {...props} />}
             style={styles.container}

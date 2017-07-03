@@ -1,6 +1,6 @@
 {
+  "main": "./Login.js",
   "name": "app",
-  "version": "0.0.0",
   "private": true,
-  "main": "./Login.js"
+  "version": "0.0.0"
 }

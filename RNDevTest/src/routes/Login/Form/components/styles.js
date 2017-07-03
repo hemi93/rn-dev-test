@@ -1,5 +1,4 @@
 import { Dimensions, StyleSheet } from 'react-native'
-import { COLOR_PRIMARY } from '../../../../constants/colors'
 
 const signInButtonHeight = 100
 const signInButtonBorderRadius = signInButtonHeight / 2
