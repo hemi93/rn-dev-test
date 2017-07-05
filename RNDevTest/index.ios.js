@@ -12,4 +12,4 @@ const RNDevTest = () => (
   </Provider>
 )
 
-AppRegistry.registerComponent('RNDevTest', () => RNDevTest)
+AppRegistry.registerComponent('Test', () => RNDevTest)

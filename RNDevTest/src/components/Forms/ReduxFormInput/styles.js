@@ -4,11 +4,13 @@ export default StyleSheet.create({
   input: {
     alignSelf: 'stretch',
     borderColor: 'white',
-    color: 'white'
+    color: 'white',
+    height: 60
   },
   error: {
-    color: '#C62828',
+    color: '#FF5252',
     alignSelf: 'flex-end',
-    fontSize: 10
+    fontSize: 10,
+    backgroundColor: 'transparent'
   }
 })

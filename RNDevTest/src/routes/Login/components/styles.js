@@ -4,6 +4,7 @@ const { width, height } = Dimensions.get('window')
 
 export default StyleSheet.create({
   image: {
+    backgroundColor: 'transparent',
     flex: 1,
     height,
     justifyContent: 'center',

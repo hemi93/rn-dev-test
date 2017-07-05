@@ -5,7 +5,7 @@ import { ActivityIndicator } from 'react-native'
 const Spinner = ({ size, color }) => <ActivityIndicator size={size} color={color} />
 
 Spinner.defaultProps = {
-  size: 120,
+  size: 'large',
   color: '#FF5252'
 }
 
