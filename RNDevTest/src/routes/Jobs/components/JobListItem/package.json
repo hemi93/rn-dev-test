@@ -1,0 +1,6 @@
+{
+  "name": "job-list-item",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./JobListItem.js"
+}

@@ -1,0 +1,6 @@
+{
+  "main": "./ReduxFormInput.js",
+  "name": "redux-form-input",
+  "private": true,
+  "version": "0.0.0"
+}
